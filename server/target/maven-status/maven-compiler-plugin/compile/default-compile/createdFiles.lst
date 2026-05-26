@@ -1,0 +1,13 @@
+com\riddlegame\model\User.class
+com\riddlegame\RiddleGameApplication.class
+com\riddlegame\websocket\GameSocketController.class
+com\riddlegame\repository\RoomRepository.class
+com\riddlegame\service\AuthService.class
+com\riddlegame\repository\UserRepository.class
+com\riddlegame\controller\AuthController.class
+com\riddlegame\service\RiddleService.class
+com\riddlegame\model\Room.class
+com\riddlegame\controller\RoomController.class
+com\riddlegame\controller\GameController.class
+com\riddlegame\websocket\WebSocketConfig.class
+com\riddlegame\security\SecurityConfig.class

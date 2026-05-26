@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#f7a8c4,#b7c9ff);
+  overflow-x:hidden;
+}
+
+#root{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* MAIN CONTAINER */
+
+.game-container{
+  width:100%;
+  max-width:900px;
+  padding:30px;
+  text-align:center;
+}
+
+/* HEADINGS */
+
+h1{
+  font-size:3rem;
+  font-weight:700;
+  color:#111;
+  margin-bottom:25px;
+}
+
+h2{
+  font-size:1.5rem;
+  margin-bottom:15px;
+  color:#222;
+}
+
+/* QUESTION */
+
+.question{
+  font-size:1.4rem;
+  font-weight:600;
+  color:#111;
+  margin-bottom:25px;
+  line-height:1.5;
+}
+
+/* INPUT */
+
+input{
+  width:100%;
+  max-width:420px;
+  padding:14px 18px;
+  border:none;
+  outline:none;
+  border-radius:14px;
+  font-size:1rem;
+  background:white;
+  margin-bottom:20px;
+  box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* BUTTON GROUP */
+
+.button-group{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* BUTTONS */
+
+button{
+  border:none;
+  padding:13px 24px;
+  border-radius:14px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s ease;
+  min-width:180px;
+  box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* SINGLE PLAYER */
+
+.single-btn{
+  background:linear-gradient(135deg,#7b8cff,#9b6bff);
+  color:white;
+}
+
+/* MULTIPLAYER */
+
+.multi-btn{
+  background:linear-gradient(135deg,#ff7aa2,#ff8fb2);
+  color:white;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+  background:#222;
+  color:white;
+  min-width:100px;
+  margin-bottom:20px;
+}
+
+/* BUTTON HOVER */
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* LEVELS */
+
+.levels{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
+
+/* LEVEL BUTTON */
+
+.level-btn{
+  min-width:140px;
+  padding:12px 18px;
+  border-radius:12px;
+  background:white;
+  color:#222;
+  font-size:0.95rem;
+  font-weight:600;
+}
+
+/* SCORE */
+
+.score{
+  margin-top:20px;
+  font-size:1.4rem;
+  font-weight:700;
+  color:#222;
+}
+
+/* WINNER */
+
+.winner-title{
+  font-size:3rem;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.winner-name{
+  font-size:1.2rem;
+  color:#222;
+  margin:15px 0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  h1{
+    font-size:2rem;
+  }
+
+  .winner-title{
+    font-size:2rem;
+  }
+
+  .question{
+    font-size:1.1rem;
+  }
+
+  button{
+    width:100%;
+    min-width:auto;
+  }
+
+  .button-group{
+    flex-direction:column;
+    align-items:center;
+  }
+
+}
