@@ -28,7 +28,7 @@ function Lobby() {
     try {
 
       const res = await axios.get(
-        `http://localhost:8080/rooms/players/${roomName}`
+        `https://riddlessolvingbackend-production.up.railway.app/rooms/players/${roomName}`
       )
 
       setPlayers(res.data)

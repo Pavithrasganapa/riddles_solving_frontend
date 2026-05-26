@@ -16,7 +16,7 @@ function JoinRoom() {
     try {
 
       await axios.post(
-        `http://localhost:8080/rooms/join/${roomName}/${userId}`,
+        `https://riddlessolvingbackend-production.up.railway.app/rooms/join/${roomName}/${userId}`,
         {
           roomPassword
         }

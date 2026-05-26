@@ -12,7 +12,7 @@ function CreateRoom() {
   const createRoom = async () => {
 
     await axios.post(
-      'http://localhost:8080/rooms/create',
+      'https://riddlessolvingbackend-production.up.railway.app/rooms/create',
       {
         roomName,
         roomPassword

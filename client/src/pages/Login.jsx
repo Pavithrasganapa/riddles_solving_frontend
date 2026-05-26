@@ -14,7 +14,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        'http://localhost:8080/auth/login',
+        'https://riddlessolvingbackend-production.up.railway.app/auth/login',
         {
           email,
           password

@@ -15,7 +15,7 @@ function Register() {
     try {
 
       await axios.post(
-        'http://localhost:8080/auth/register',
+        'https://riddlessolvingbackend-production.up.railway.app/auth/register',
         {
           name,
           email,
