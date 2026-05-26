@@ -21,18 +21,16 @@ public class AuthService {
         return userRepository.save(user);
     }
 
-    public String login(String email, String password) {
+    public User login(String email, String password) {
 
-        User user = userRepository.findByEmail(email).orElse(null);
+    User user = userRepository.findByEmail(email);
 
-        if (user == null) {
-            return "User Not Found";
-        }
+    if(user != null &&
+       user.getPassword().equals(password)) {
 
-        if (encoder.matches(password, user.getPassword())) {
-            return "Login Success";
-        }
-
-        return "Wrong Password";
+        return user;
     }
+
+    return null;
+}
 }
