@@ -14,7 +14,7 @@ function Register() {
 
     try {
 
-      await axios.post(
+      const res = await axios.post(
         'https://riddlessolvingbackend-production.up.railway.app/auth/register',
         {
           name,
@@ -22,6 +22,8 @@ function Register() {
           password
         }
       )
+
+      localStorage.setItem('userId', res.data.id)
 
       alert('Registration Successful')
 

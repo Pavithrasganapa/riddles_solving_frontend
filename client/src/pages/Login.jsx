@@ -23,6 +23,7 @@ function Login() {
 
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('username', res.data.name)
+      localStorage.setItem('userId', res.data.id)
 
       navigate('/multiplayer')
 
