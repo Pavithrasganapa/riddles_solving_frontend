@@ -18,6 +18,9 @@ public class Room {
     @ManyToMany
     private List<User> players = new ArrayList<>();
 
+    @Column(unique = true)
+    private String roomName;
+
     public Long getId() {
         return id;
     }
@@ -25,7 +28,7 @@ public class Room {
     public void setId(Long id) {
         this.id = id;
     }
-
+    
     public String getRoomName() {
         return roomName;
     }
@@ -48,5 +51,9 @@ public class Room {
 
     public void setPlayers(List<User> players) {
         this.players = players;
+    }
+
+    if(roomRepository.findByRoomName(room.getRoomName()).isPresent()) {
+    return null;
     }
 }

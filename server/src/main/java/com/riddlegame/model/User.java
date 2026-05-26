@@ -1,6 +1,7 @@
 package com.riddlegame.model;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -16,6 +17,9 @@ public class User {
     private String password;
 
     private int score;
+    @ManyToMany(mappedBy = "players")
+    @JsonIgnore
+    private List<Room> rooms;
 
     public User() {
     }
