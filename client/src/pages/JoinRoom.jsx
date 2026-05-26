@@ -12,7 +12,9 @@ function JoinRoom() {
   const joinRoom = async () => {
 
     const userId = localStorage.getItem('userId')
-
+    console.log(roomName)
+console.log(roomPassword)
+console.log(userId)
     try {
 
       await axios.post(
