@@ -1,31 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 import BackButton from '../components/BackButton'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 
 function Winner() {
 
   const navigate = useNavigate()
 
   const playerName = localStorage.getItem('playerName')
-  const [players, setPlayers] = useState([])
-
-  useEffect(() => {
-
-  const fetchLeaderboard = async () => {
-
-    const roomName = localStorage.getItem('roomName')
-
-    const res = await axios.get(
-      `https://riddlessolvingbackend-production.up.railway.app/game/leaderboard/${roomName}`
-    )
-
-    setPlayers(res.data)
-  }
-
-  fetchLeaderboard()
-
-}, [])
 
   const multiplayerScores = JSON.parse(
     localStorage.getItem('finalScores')
@@ -50,7 +30,7 @@ function Winner() {
             </h2>
 
             {
-              players.map((player, index) => (
+              multiplayerScores.map((player, index) => (
                 <div
                   key={player.name}
                   className='flex justify-between text-3xl mb-5'
