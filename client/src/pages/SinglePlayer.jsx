@@ -41,6 +41,11 @@ function SinglePlayer() {
           navigate(`/single/${level + 2}`)
         }
         else {
+          const userId = localStorage.getItem('userId')
+
+        await axios.post(
+        `https://riddlessolvingbackend-production.up.railway.app/game/update-score/${userId}/${score}`
+)
           navigate('/winner')
         }
 

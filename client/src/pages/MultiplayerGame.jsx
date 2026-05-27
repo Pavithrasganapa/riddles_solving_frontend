@@ -109,6 +109,11 @@ function MultiplayerGame() {
 
       localStorage.setItem('finalScores', JSON.stringify(scores))
 
+      const userId = localStorage.getItem('userId')
+
+    await axios.post(
+      `https://riddlessolvingbackend-production.up.railway.app/game/update-score/${userId}/${score}`
+)
       navigate('/winner')
     }
   }
