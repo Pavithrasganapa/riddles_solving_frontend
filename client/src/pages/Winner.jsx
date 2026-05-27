@@ -13,20 +13,20 @@ function Winner() {
 
   useEffect(() => {
 
-  const fetchLeaderboard = async () => {
+    const fetchLeaderboard = async () => {
 
-    const roomName = localStorage.getItem('roomName')
+      const roomName = localStorage.getItem('roomName')
 
-    const res = await axios.get(
-      `https://riddlessolvingbackend-production.up.railway.app/game/leaderboard/${roomName}`
-    )
+      const res = await axios.get(
+        `https://riddlessolvingbackend-production.up.railway.app/game/leaderboard/${roomName}`
+      )
 
-    setPlayers(res.data)
-  }
+      setPlayers(res.data)
+    }
 
-  fetchLeaderboard()
+    fetchLeaderboard()
 
-}, [])
+  }, [])
 
   const singlePlayerScore = localStorage.getItem('singlePlayerScore')
 
