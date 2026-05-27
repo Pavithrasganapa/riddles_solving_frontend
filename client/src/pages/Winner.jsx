@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import BackButton from '../components/BackButton'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function Winner() {
 
