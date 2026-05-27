@@ -36,7 +36,7 @@ function Winner() {
       <h1 className='text-7xl mb-10'>🏆 WINNER SCREEN 🏆</h1>
 
       {
-        multiplayerScores ? (
+        players.length > 0 ? (
 
           <div className='bg-gray-900 p-10 rounded-xl w-[500px]'>
 
